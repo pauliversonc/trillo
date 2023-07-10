@@ -1,13 +1,12 @@
 .header {
   height: 7rem;
   background-color: #fff;
-  border-bottom: var(--grey-light-2);
+  border-bottom: 1px solid var(--grey-light-2);
   font-size: 1.4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  border: 1px solid red;
 
   .logo {
     height: 3.25rem;
