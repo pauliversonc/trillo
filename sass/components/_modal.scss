@@ -1,0 +1,44 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(#000, .9);
+  z-index: 100;
+
+
+  
+
+  // visibility: hidden;
+  // opacity: 0;
+
+  &__body {
+    align-self: stretch;
+    flex: 1;
+    max-width: 100rem;
+    margin: 8% auto;
+    padding: 0;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 4rem;
+    
+    color: var(--grey-dark-3);
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    transition: all .2s;
+
+    &:hover {
+      color: var(--grey-light-3);
+    }
+    
+  }
+
+}

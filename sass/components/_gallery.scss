@@ -1,8 +1,60 @@
 .gallery {
   display: flex;
 
+
+
+  &__item {
+    overflow: hidden;
+    position: relative;
+    
+
+    &:hover {
+
+      .gallery__photo {
+        transform: scale(1.1);
+        filter: blur(1.5px);
+
+      }
+
+      .gallery__caption {
+        transform: translateY(0);
+      }
+    }
+  }
+
+
+
   &__photo{
+    height: 100%;
     width: 100%;
-    display: block;
+    transition: all .3s ease;
+    cursor: pointer;
+  }
+
+  &__caption {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    transform: translateY(100%);
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    color: #fff;
+    transition: all .3s ease;
+
+  }
+
+  &__caption-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__caption-body {
+    font-size: 1rem;
   }
 }
