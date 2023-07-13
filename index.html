@@ -13,7 +13,7 @@
     <title>Trillo &mdash; Your all-in-one booking app</title>
 </head>
 
-<body>
+<body class="body">
     <div class="container">
 
         <header class="header">
@@ -105,7 +105,7 @@
                 <div class="gallery">
 
                     <figure class="gallery__item">
-                        <img src="img/hotel-1.jpg" class="gallery__photo" alt="Hotel 1 Photo">
+                        <img src="img/hotel-1.jpg" data-img="0" class="gallery__photo" alt="Hotel 1 Photo">
                         <figcaption class="gallery__caption">
                             <span class="gallery__caption-title">Anne Smith</span>
                             <span class="gallery__caption-body">Cavinte, Tres Marites</span>
@@ -113,7 +113,7 @@
                     </figure>
 
                     <figure class="gallery__item">
-                        <img src="img/hotel-2.jpg" class="gallery__photo" alt="Hotel 2 Photo">
+                        <img src="img/hotel-2.jpg" data-img="1" class="gallery__photo" alt="Hotel 2 Photo">
                         <figcaption class="gallery__caption">
                             <span class="gallery__caption-title">Mary Smith</span>
                             <span class="gallery__caption-body">Cavinte, Tres Marites</span>
@@ -121,7 +121,7 @@
                     </figure>
 
                     <figure class="gallery__item">
-                        <img src="img/hotel-3.jpg" class="gallery__photo" alt="Hotel 3 Photo">
+                        <img src="img/hotel-3.jpg" data-img="2" class="gallery__photo" alt="Hotel 3 Photo">
                         <figcaption class="gallery__caption">
                             <span class="gallery__caption-title">Mary Smith</span>
                             <span class="gallery__caption-body">Cavinte, Tres Marites</span>
@@ -248,7 +248,7 @@
         </div>
     </div>
 
-    <div class="modal active">
+    <div class="modal">
         <button class="modal__close-btn">&times;</button>
 
 
@@ -258,7 +258,7 @@
             <div class="slider">
 
                 <!-- img -->
-                <div class="slide">
+                <div class="slide slide--1">
                     <img src="img/hotel-1.jpg" class="slide__img" alt="Hotel 1">
                     <div class="slide__description">
                         <span class="slide__title">Malibu, California</span>
@@ -267,40 +267,40 @@
                     </div>
                 </div>
 
-                <div class="slide">
+                <div class="slide slide--2 ">
                     <img src="img/hotel-2.jpg" class="slide__img" alt="Hotel 2">
                     <div class="slide__description">
-                        <span class="slide__title">Malibu, California</span>
+                        <span class="slide__title">Manila, Resorts World</span>
                         <p class="slide__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quas
                             ratione! Ex, voluptatum.</p>
                     </div>
                 </div>
 
-                <div class="slide">
+                <div class="slide slide--3 ">
                     <img src="img/hotel-3.jpg" class="slide__img" alt="Hotel 3">
                     <div class="slide__description">
-                        <span class="slide__title">Malibu, California</span>
+                        <span class="slide__title">Cebu, Funtasya</span>
                         <p class="slide__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quas
                             ratione! Ex, voluptatum.</p>
                     </div>
                 </div>
 
-                <button class="slider__btn slider__btn--left ">
+                <button class="slider__btn slider__btn--left" data-pos="left">
                     <svg class="slider__btn-icon">
                         <use xlink:href="img/sprite.svg#icon-chevron-thin-left"></use>
                     </svg>
                 </button>
 
-                <button class="slider__btn slider__btn--right">
+                <button class="slider__btn slider__btn--right" data-pos="right">
                     <svg class="slider__btn-icon">
                         <use xlink:href="img/sprite.svg#icon-chevron-thin-right"></use>
                     </svg>
                 </button>
 
                 <div class="slider__lines">
-                    <span class="slider__line">&nbsp;</span>
-                    <span class="slider__line">&nbsp;</span>
-                    <span class="slider__line">&nbsp;</span>
+                    <span class="slider__line" data-line="0">&nbsp;</span>
+                    <span class="slider__line" data-line="1">&nbsp;</span>
+                    <span class="slider__line" data-line="2">&nbsp;</span>
                 </div>
 
             </div>

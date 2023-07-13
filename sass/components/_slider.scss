@@ -70,10 +70,15 @@
 
     cursor: pointer;
 
-    &:hover {
+    &:hover, 
+    &.active {
       background-color: var(--grey-light-3);
     }
+
+
   }
+
+
 
 }
 
@@ -83,6 +88,7 @@
   top: 0;
   height: 100%;
 
+  transition: all .2s;
 
   &__content {
     display: flex;
@@ -125,6 +131,12 @@
     color: var(--grey-light-4);
     font-size: 1.4rem;
   }
+
+
+
+
+
+  
 }
 
 

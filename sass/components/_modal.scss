@@ -7,11 +7,16 @@
   background-color: rgba(#000, .9);
   z-index: 100;
 
+  visibility: hidden;
+  opacity: 0;
 
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
   
 
-  // visibility: hidden;
-  // opacity: 0;
+
 
   &__body {
     align-self: stretch;
@@ -19,6 +24,12 @@
     max-width: 100rem;
     margin: 8% auto;
     padding: 0;
+    transform: translateY(-200%);
+    transition: .7s ease .1s;
+  }
+
+  &.active > &__body {
+    transform: translateY(0);
   }
 
   &__close-btn {
