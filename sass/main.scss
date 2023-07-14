@@ -2,6 +2,7 @@
 
 @import "base/base";
 @import "base/animation";
+@import "base/utilities";
 
 @import "components/form";
 @import "components/user-nav";
@@ -12,6 +13,9 @@
 @import "components/review";
 @import "components/modal";
 @import "components/slider";
+@import "components/book";
+@import "components/info";
+@import "components/flights";
 
 
 @import "layout/container";
@@ -21,3 +25,4 @@
 @import "layout/sidebar";
 @import "layout/detail";
 @import "layout/cta";
+@import "layout/flight-view";
