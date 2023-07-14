@@ -25,7 +25,6 @@ html {
   min-height: 100vh;
 
   &.no-scroll {
-    background-color: red;
     overflow-y: hidden; // remove after finishing modal
   }
 

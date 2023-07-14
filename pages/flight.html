@@ -12,10 +12,92 @@
     <title>trillo &mdash; Your all-in-one booking app</title>
 </head>
 
-<body>
-    <!-- <div class="container">
-        adasd
-    </div> -->
+<body class="body">
+    <div class="container">
+        <header class="header">
+            <img src="../img/logo.png" alt="Trillo logo" class="logo">
+
+            <form action="#" class="search">
+                <input type="text" class="search__input" placeholder="Search hotels">
+                <button class="search__button">
+                    <svg class="search__icon">
+                        <use xlink:href="../img/sprite.svg#icon-magnifying-glass"></use>
+                    </svg>
+                </button>
+            </form>
+
+            <nav class="user-nav">
+
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="../img/sprite.svg#icon-bookmark"></use>
+                    </svg>
+                    <span class="user-nav__notification">7</span>
+                </div>
+
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="img/sprite.svg#icon-chat"></use>
+                    </svg>
+                    <span class="user-nav__notification">13</span>
+                </div>
+
+                <div class="user-nav__user">
+                    <img src="../img/user.jpg" alt="Jonas" class="user-nav__user-photo">
+                    <span class="user-nav__user-name">Jonas</span>
+                </div>
+
+            </nav>
+        </header>
+
+        <div class="content">
+            <nav class="sidebar">
+                <ul class="side-nav">
+
+                    <li class="side-nav__item side-nav__item--active">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-home"></use>
+                                <span>Hotel</span>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="side-nav__item">
+                        <a href="pages/flight.html" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                                <span>Flight</span>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="side-nav__item">
+                        <a href="pages/car-rental.html" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-key"></use>
+                                <span>Car Rental</span>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="side-nav__item">
+                        <a href="pages/tours.html" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-map"></use>
+                                <span>Tours</span>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="legal">
+                    &copy; 2017 by trillo. All rights reserved.
+                </div>
+            </nav>
+
+        </div>
+    </div>
 </body>
 
 </html>
