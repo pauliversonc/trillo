@@ -106,7 +106,7 @@ const nextSlide = () => {
 
   activateDot(currentSlide);
   goToSlide(currentSlide);
-}
+};
 
 /**
  * This function moves to the previous slide in the image carousel.
@@ -124,5 +124,28 @@ const prevSlide = () => {
   }
   activateDot(currentSlide);
   goToSlide(currentSlide);
-}
+};
+
+// const navItem  = document.querySelectorAll('.side-nav__item');
+
+// const sidenav = document.querySelector('.sidebar');
+// sidenav.addEventListener('click', function(e){
+//   // e.preventDefault();
+//   const matchedEl = e.target.closest('.side-nav__link');
+//   if(!matchedEl) return
+
+//   // remove active to all navItem
+//   navItem.forEach((line) => {
+//     line.classList.remove('side-nav__item--active');
+//   })
+
+//   const selectedNavItem = matchedEl.closest('.side-nav__item')
+//   selectedNavItem.classList.add('side-nav__item--active');
+
+
+// });
+
+// const activateLink = function() {
+
+// };
 
