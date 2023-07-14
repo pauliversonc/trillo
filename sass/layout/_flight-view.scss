@@ -1,0 +1,9 @@
+.flight-view {
+  padding: 4.5rem;
+  flex: 1;
+
+
+  display: grid;
+  grid-template-columns: 55% auto;
+  gap: 4.5rem;
+}
