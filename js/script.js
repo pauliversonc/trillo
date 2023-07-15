@@ -149,3 +149,40 @@ const prevSlide = () => {
 
 // };
 
+
+
+
+
+
+
+
+
+
+
+// Get the input fields
+const startDateInput = document.getElementById('start-date');
+const endDateInput = document.getElementById('end-date');
+
+// Add event listeners to the inputs
+startDateInput.addEventListener('change', updateEndDateInput);
+endDateInput.addEventListener('change', updateStartDateInput);
+
+// Update the minimum selectable date for the end date input
+function updateEndDateInput() {
+  const startDate = new Date(startDateInput.value);
+  endDateInput.min = formatDate(startDate);
+}
+
+// Update the maximum selectable date for the start date input
+function updateStartDateInput() {
+  const endDate = new Date(endDateInput.value);
+  startDateInput.max = formatDate(endDate);
+}
+
+// Format the date as "YYYY-MM-DD"
+function formatDate(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}

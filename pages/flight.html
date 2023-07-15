@@ -97,9 +97,10 @@
             </nav>
 
             <main class="flight-view">
+
                 <div class="book">
 
-                    <div class="book__header u-mb-small">
+                    <div class="book__header u-mb-m">
 
                         <button class="book__header-btn">
                             <svg class="book__header-icon">
@@ -114,51 +115,69 @@
                             </svg>
                             <span class="book__header-text">Round-trip</span>
                         </button>
-                    
+
                     </div>
 
                     <!-- red -->
-                    <form class="book__form"> 
+                    <form class="book__form">
 
-                        <div class="book__form-container u-mb-small">
-                            
-                            <!-- from -->
-                            <div class="book__form-group">
-                                <input type="text" name="from" id="from" class="book__input book__input--from">
-                                <span class="book__icon-box book__icon-box--top">
-                                    <svg class="book__icon">
-                                        <use xlink:href="../img/sprite.svg#icon-aircraft-take-off"></use>
-                                    </svg>
-                                </span>
-                            </div>
-
-                            <hr class="book__divider">
-
-                            <!-- to -->
-                            <div class="book__form-group">
-                                <input type="text" name="to" id="to" class="book__input book__input--to">
-                                <span class="book__icon-box book__icon-box--bottom">
-                                    <svg class="book__icon">
-                                        <use xlink:href="../img/sprite.svg#icon-aircraft-take-off"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-
-
-                        <div class="book__form-group">
-                            <input class="book__input book__input--dateFrom" type="date" name="dateFrom" id="dateFrom">
-                            <span class="book__icon-box ">
+                        <!-- from input -->
+                        <div class="book__form-group book__form-group--input">
+                            <label for="from" class="book__label">From</label>
+                            <input type="text" name="from" id="from" class="book__input">
+                            <span class="book__icon-box">
                                 <svg class="book__icon">
                                     <use xlink:href="../img/sprite.svg#icon-aircraft-take-off"></use>
                                 </svg>
                             </span>
                         </div>
 
-     
 
-                        
-                        
+                        <!-- to input-->
+                        <div class="book__form-group book__form-group--input">
+                            <label for="to" class="book__label">To</label>
+                            <input type="text" name="to" id="to" class="book__input">
+                            <span class="book__icon-box">
+                                <svg class="book__icon">
+                                    <use xlink:href="../img/sprite.svg#icon-aircraft-take-off"></use>
+                                </svg>
+                            </span>
+                        </div>
+
+
+                        <!-- from date-->
+                        <div class="book__form-group book__form-group--dateFrom">
+                            <input type="date" name="dateFrom" id="dateFrom" class="book__input">
+                        </div>
+
+                        <!-- to date-->
+                        <div class="book__form-group book__form-group--dateTo">
+                            <input type="date" name="dateTo" id="dateTo" class="book__input">
+
+                        </div>
+
+
+
+                        <!-- seat test-->
+                        <div class="book__form-group">
+                            <input type="text" name="seat" disabled id="seat" class="book__input">
+                            <span class="book__icon-box">
+                                <svg class="book__icon">
+                                    <use xlink:href="../img/sprite.svg#icon-aircraft-take-off"></use>
+                                </svg>
+                            </span>
+                        </div>
+
+
+                        <!-- class dropdown-->
+                        <div class="book__form-group">
+                            <select name="class" id="class" class="book__input">
+                                <option value="a">a</option>
+                            </select>
+                        </div>
+
+
+                        <input class="book__btn-submit" type="submit" value="Book flight" disabled>
 
 
                     </form>
@@ -169,7 +188,7 @@
                 </div>
 
                 <div class="flights">
-                    img gallery
+                    flights
                 </div>
             </main>
 

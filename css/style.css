@@ -49,8 +49,11 @@ html {
     transform: scale(1);
     box-shadow: none; } }
 
-.u-mb-small {
-  margin-bottom: 1.5rem  !important; }
+.u-mb-s {
+  margin-bottom: 1rem  !important; }
+
+.u-mb-m {
+  margin-bottom: 1.6rem  !important; }
 
 .search {
   flex: 0 0 40%;
@@ -488,92 +491,68 @@ html {
   box-shadow: var(--shadow-l);
   padding: 3rem; }
   .book__header {
+    font-size: 1.4rem;
     display: flex;
-    justify-content: space-around;
-    align-items: center; }
+    align-items: center;
+    justify-content: start; }
   .book__header-btn {
-    cursor: pointer;
-    background-color: #fff;
-    font-size: inherit;
-    color: var(--primary);
-    padding: .4rem 2rem .4rem 4rem;
-    font-size: 1.4rem;
-    font-weight: 600;
     border: none;
-    position: relative; }
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .book__header-icon {
-    position: absolute;
-    left: 0;
-    bottom: 50%;
-    transform: translate(50%, 50%);
-    height: 2rem;
-    width: 2rem;
-    fill: currentColor; }
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem; }
   .book__header-text {
-    font-size: inherit;
-    font-weight: inherit;
-    color: currentColor; }
-  .book__form-container {
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1.6rem; }
+  .book__form {
+    padding: 1.6rem;
     border: 2px solid var(--grey-light-3);
-    border-radius: 10px;
-    overflow: hidden; }
+    background-color: var(--grey-light-1);
+    display: grid;
+    grid-template-columns: 60% auto;
+    gap: 1.5rem; }
   .book__form-group {
-    position: relative; }
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    position: relative;
+    border: 2px solid var(--grey-light-3); }
+    .book__form-group--input {
+      grid-column: 1 / -1; }
+    .book__form-group--dateTo {
+      grid-row: 4; }
+  .book__label {
+    position: absolute;
+    top: 0;
+    left: 0; }
   .book__input {
+    width: 100%;
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
     color: inherit;
-    background-color: #fff;
-    border: none;
-    width: 100%;
-    margin-left: rem; }
+    padding: 2rem 4rem 1rem 1rem;
+    border: none; }
     .book__input:focus {
-      outline: none;
-      width: 100%; }
-    .book__input--from {
-      padding: 2rem 4.25rem 1rem 5.25rem;
-      margin-bottom: 1rem; }
-    .book__input--to {
-      margin-top: 1rem;
-      padding: 1rem 4.25rem 2rem 5.25rem; }
-    .book__input--dateFrom {
-      border: 1px solid red;
-      padding: 1rem 4.25rem 2rem 5.25rem; }
-      .book__input--dateFrom::-webkit-calendar-picker-indicator {
-        position: absolute;
-        left: 5%;
-        z-index: 999;
-        padding-right: 1rem;
-        height: 2.25rem;
-        width: 2.25rem;
-        opacity: 0;
-        cursor: pointer; }
+      outline: none; }
   .book__icon-box {
     position: absolute;
-    left: 0;
-    border-right: 2px solid var(--grey-light-3);
-    padding-right: 1rem; }
-    .book__icon-box--top {
-      top: 50%;
-      transform: translate(30%, -50%); }
-    .book__icon-box--bottom {
-      bottom: 50%;
-      transform: translate(30%, 50%); }
+    top: 0;
+    right: 0; }
   .book__icon {
-    height: 2.25rem;
-    width: 2.25rem;
-    fill: var(--grey-dark-3);
-    background-color: red; }
-  .book__divider {
-    margin: 0 6rem;
-    height: 2px;
-    /* Adjust the height as desired */
-    background-color: var(--grey-light-3);
-    border: none;
-    /* Remove the default border */ }
+    width: 1.4rem;
+    height: 1.4rem; }
+  .book__btn-submit {
+    grid-column: 1/-1; }
 
 .flights {
   grid-column: 1 / -1; }
