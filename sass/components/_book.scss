@@ -20,11 +20,39 @@
     background-color: #fff;
     cursor: pointer;
     color: var(--primary);
-
+    // border: 2px solid green;
+    padding: 1rem;
+    // background-color: blue;
     display: flex;
     align-items: center;
 
+    position: relative;
+    overflow: hidden;
 
+    &::after {
+      content: '';
+      height: 2px;
+      background-color: var(--primary);
+      
+      z-index: 999;
+      position: absolute;
+
+      bottom: 0;
+      left: 0;
+      transform-origin: left;
+      width: 0;
+      transition: all .2s ease;
+      
+    }
+
+    &:hover::after,
+    &.active::after{
+      width: 100%;
+    }
+
+    
+
+    
   }
 
   &__header-text {
@@ -65,8 +93,26 @@
       border-radius: 3px;
     }
 
-    &--dateTo {
+    &--dateFrom {
+      grid-column: 1;
       grid-row: 3;
+      
+    }
+
+    &--dateTo {
+      grid-column: 2;
+      grid-row: 3;
+
+      &.hide {
+        display: none;
+      }
+      
+    }
+
+
+
+    &--seat {
+      grid-column: 3 / -1;
     }
 
     
@@ -114,6 +160,7 @@
     &--seat {
       cursor: pointer;
       color: var(--grey-light-4);
+
     }
 
   }
@@ -139,13 +186,13 @@
     bottom: 0;
     right: 0;
 
-    transform: translate(-75%, -35%);
+    transform: translate(-100%, -35%);
 
   }
 
   &__icon {
-    height: 1.4rem;
-    width: 1.4rem
+    height: 1.2rem;
+    width: 1.2rem
   }
 
  

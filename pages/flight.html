@@ -102,20 +102,21 @@
 
                     <div class="book__header">
 
-                        <button class="book__header-btn">
-     
-                            <span class="book__header-text">One-way</span>
+                        <button class="book__header-btn active" data-trip="tripb">
+                            <span class="book__header-text" >Round-trip</span>
                             <svg class="book__header-icon">
-                                <use xlink:href="../img/sprite.svg#icon-bookmark"></use>
+                                <use xlink:href="../img/sprite.svg#icon-ccw"></use>
                             </svg>
                         </button>
 
-                        <button class="book__header-btn">
-                            <span class="book__header-text">Round-trip</span>
+                        <button class="book__header-btn"  data-trip="tripa">
+                            <span class="book__header-text">One-way</span>
                             <svg class="book__header-icon">
-                                <use xlink:href="../img/sprite.svg#icon-bookmark"></use>
+                                <use xlink:href="../img/sprite.svg#icon-aircraft-landing"></use>
                             </svg>
                         </button>
+
+
 
                     </div>
 
@@ -146,20 +147,19 @@
                         <div class="book__form-group book__form-group--dateTo">
                             <label for="dateTo" class="book__label">Return</label>
                             <input type="date" required name="dateTo" id="dateTo" class="book__input book__input--date">
-
                         </div>
 
 
 
                         <!-- seat test-->
-                        <div class="book__form-group">
+                        <div class="book__form-group book__form-group--seat">
                             <label class="book__label">Seat</label>
                             <div name="seat" id="seat" class="book__input book__input--seat">0</div>
 
 
                             <div class="book__icon-box">
                                 <svg class="book__icon">
-                                    <use xlink:href="../img/sprite.svg#icon-magnifying-glass"></use>
+                                    <use xlink:href="../img/sprite.svg#icon-users"></use>
                                 </svg>
                             </div>
 
@@ -171,9 +171,9 @@
                                     </div>
 
                                     <div class="seat__container-btn">
-                                        <div role="button" class="seat__btn">&minus;</div>
+                                        <div role="button" class="seat__btn" data-btn="minus">&minus;</div>
                                         <span class="seat__num">0</span>
-                                        <div role="button" class="seat__btn">&plus;</div>
+                                        <div role="button" class="seat__btn" data-btn="plus">&plus;</div>
                                     </div>
                                 </div>
 
@@ -186,9 +186,9 @@
                                     </div>
 
                                     <div class="seat__container-btn">
-                                        <div role="button" class="seat__btn">&minus;</div>
+                                        <div role="button" class="seat__btn" data-btn="minus">&minus;</div>
                                         <span class="seat__num">0</span>
-                                        <div role="button" class="seat__btn">&plus;</div>
+                                        <div role="button" class="seat__btn" data-btn="plus">&plus;</div>
                                     </div>
                                 </div>
 
@@ -201,9 +201,9 @@
                                     </div>
 
                                     <div class="seat__container-btn">
-                                        <div role="button" class="seat__btn">&minus;</div>
+                                        <div role="button" class="seat__btn" data-btn="minus">&minus;</div>
                                         <span class="seat__num">0</span>
-                                        <div role="button" class="seat__btn">&plus;</div>
+                                        <div role="button" class="seat__btn" data-btn="plus">&plus;</div>
                                     </div>
                                 </div>
 
@@ -216,17 +216,10 @@
                         </div>
 
 
-                        <!-- class dropdown-->
-                        <div class="book__form-group">
-                            <label for="class" class="book__label">Class</label>
-
-                            <select name="class" id="class" class="book__input">
-                                <option value="a">a</option>
-                            </select>
-                        </div>
-
-
-                      <button type="submit" class="book__btn-submit">Book flight</button>
+                    <button class="btn btn-sm">
+                        <span class="btn__visible">Find flight</span>
+                        <span class="btn__invisible">Promo code allowed</span>
+                    </button>
 
 
                     </form>
