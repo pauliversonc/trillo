@@ -2,10 +2,13 @@
   min-height: 20rem; // 200px
   border: 1px solid red;
   position: relative;
-    // overflow-x: hidden;
+  overflow: hidden;
+
 
   &__width {
-    border: 1px solid pink;
+    position: absolute;
+
+    border: 1px solid green;
     position: absolute;
     top: 0;
     left: 0;
@@ -14,13 +17,17 @@
     display: flex;
     align-items: start;
     justify-content: start;
+
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    transition: 0.4s ease-in-out;
   }
 
 
   &__item{
-    border: 1px solid pink;
-    position: absolute;
-    width: 30rem;
+    background-color: #ccc;
+    // width: 33.33%;
     height: 20rem;
   }
 

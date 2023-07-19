@@ -706,19 +706,20 @@ html {
 .carousel {
   min-height: 20rem;
   border: 1px solid red;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .carousel__width {
-    border: 1px solid pink;
+    position: absolute;
+    border: 1px solid green;
     position: absolute;
     top: 0;
     left: 0;
     display: flex;
     align-items: start;
-    justify-content: start; }
+    justify-content: start;
+    transition: 0.4s ease-in-out; }
   .carousel__item {
-    border: 1px solid pink;
-    position: absolute;
-    width: 30rem;
+    background-color: #ccc;
     height: 20rem; }
 
 .container {

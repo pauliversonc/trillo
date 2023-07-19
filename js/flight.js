@@ -112,3 +112,37 @@ bookHeader.addEventListener('click', function(e) {
   if(btn.dataset.trip === 'tripa') returnDate.classList.add('hide');
   if(btn.dataset.trip === 'tripb') returnDate.classList.remove('hide');
 })
+
+
+
+// try right
+const atry = document.querySelector('.btntry');
+const carousel = document.querySelector('.carousel');
+const carouselContent = document.querySelector('.carousel__width');
+atry.addEventListener('click', function(e){
+  const firstCard = document.querySelectorAll('.carousel__item')[0];
+  // carousel.scrollLeft += firstCard.clientWidth;
+  carousel.scrollTo({
+    left: carousel.scrollLeft + firstCard.clientWidth,
+    behavior: 'smooth' // Enable smooth scrolling behavior
+  });
+
+})
+
+
+const setItemWidth = function(item = 4) {
+  const carouselWidth = document.querySelector('.carousel__width');
+  const dynamicItemWidth = (carouselWidth.clientWidth / item) * .1;
+  const items = document.querySelectorAll('.carousel__item');
+  
+  items.forEach((item) => {
+    item.style.width = `${dynamicItemWidth}rem`;
+  })
+  
+  console.log('test')
+
+
+  
+}
+
+setItemWidth();
