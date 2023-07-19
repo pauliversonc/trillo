@@ -58,6 +58,12 @@ html {
 .u-mb-m {
   margin-bottom: 1.6rem  !important; }
 
+.u-mb-l {
+  margin-bottom: 2rem  !important; }
+
+.u-mb-xl {
+  margin-bottom: 3rem  !important; }
+
 .search {
   flex: 0 0 40%;
   display: flex;
@@ -696,6 +702,24 @@ html {
   .flights__header {
     display: flex;
     gap: 1rem; }
+
+.carousel {
+  min-height: 20rem;
+  border: 1px solid red;
+  position: relative; }
+  .carousel__width {
+    border: 1px solid pink;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: start;
+    justify-content: start; }
+  .carousel__item {
+    border: 1px solid pink;
+    position: absolute;
+    width: 30rem;
+    height: 20rem; }
 
 .container {
   max-width: 120rem;
