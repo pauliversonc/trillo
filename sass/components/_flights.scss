@@ -4,9 +4,14 @@
   box-shadow: var(--shadow-l);
   padding: 3rem;
 
+
   &__header {
     // background-color: red;
     display: flex;
     gap: 1rem;
+  }
+
+  &__body {
+    position: relative;
   }
 }

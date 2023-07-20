@@ -1,35 +1,120 @@
 .carousel { // container
   min-height: 20rem; // 200px
-  border: 1px solid red;
+  // border: 1px solid red;
   position: relative;
   overflow: hidden;
 
 
   &__width {
-    position: absolute;
-
-    border: 1px solid green;
+    // border: 1px solid green;
     position: absolute;
     top: 0;
     left: 0;
 
-
     display: flex;
     align-items: start;
-    justify-content: start;
-
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: start;    
 
     transition: 0.4s ease-in-out;
   }
 
 
   &__item{
-    background-color: #ccc;
-    // width: 33.33%;
+    // background-color: #ccc;
     height: 20rem;
+    overflow: hidden;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
   }
+
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    transition: all .2s;
+
+  }
+
+
+
+  &__body {
+    padding: 1.4rem;
+    width: 100%;
+    min-height: 20rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    color: #fff;
+    transform: translateY(0);
+    transition: all .3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+  }
+
+  &__img:hover + &__body, &__body:hover {
+    transform: translateY(-100%);
+
+  }
+
+  &__city {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__city-info {
+    color: var(--grey-light-4);
+    font-size: 1.4rem;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--grey-light-1);
+    color: var(--grey-dark-3);
+
+    transition: all .2s;
+
+    &:hover {
+      background-color: var(--grey-dark-3);
+      color: var(--grey-light-3);
+    }
+
+    &--left {
+      left: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    &--right {
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+
+    &-icon {
+      width: 3.2rem;
+      height: 3.2rem;
+      padding: .8rem;
+      fill: currentColor;
+    }
+
+
+  }
+
+
+
 
 
 }

@@ -114,35 +114,73 @@ bookHeader.addEventListener('click', function(e) {
 })
 
 
+// Function to get the element margin right and convert it to num
+const getMarginR = (element) => {
+  const firstItemMr = window.getComputedStyle(element).marginRight;
+  const firstItemMrUpdate = firstItemMr.slice(0 , -2);
+  const dynamicMr = +firstItemMrUpdate;
+  return dynamicMr;
+}
+
+
 
 // try right
 const atry = document.querySelector('.btntry');
-const carousel = document.querySelector('.carousel');
-const carouselContent = document.querySelector('.carousel__width');
-atry.addEventListener('click', function(e){
-  const firstCard = document.querySelectorAll('.carousel__item')[0];
-  // carousel.scrollLeft += firstCard.clientWidth;
+const btry = document.querySelector('.trybtn');
+btry.addEventListener('click', function(e){
+  const firstItem = document.querySelectorAll('.carousel__item')[0];
+  
+  const dynamicMr = getMarginR(firstItem);
   carousel.scrollTo({
-    left: carousel.scrollLeft + firstCard.clientWidth,
+    left: carousel.scrollLeft  - firstItem.clientWidth - dynamicMr,
     behavior: 'smooth' // Enable smooth scrolling behavior
   });
 
 })
 
 
+const carousel = document.querySelector('.carousel');
+const carouselContent = document.querySelector('.carousel__width');
+atry.addEventListener('click', function(e){
+  const firstItem = document.querySelectorAll('.carousel__item')[0];
+  const dynamicMr = getMarginR(firstItem);
+
+  carousel.scrollTo({
+    left: carousel.scrollLeft + firstItem.clientWidth + dynamicMr,
+    behavior: 'smooth' // Enable smooth scrolling behavior
+  });
+
+
+})
+
+// Function to set the carousel item width depending on the given parameter
 const setItemWidth = function(item = 4) {
   const carouselWidth = document.querySelector('.carousel__width');
-  const dynamicItemWidth = (carouselWidth.clientWidth / item) * .1;
   const items = document.querySelectorAll('.carousel__item');
-  
+  const firstItem = items[0];
+  const dynamicMr = getMarginR(firstItem);
+  const spaces = item - 1;
+  const itemWidth = ((carouselWidth.clientWidth - (dynamicMr * spaces)) / item) * .1;
   items.forEach((item) => {
-    item.style.width = `${dynamicItemWidth}rem`;
+    item.style.width = `${itemWidth}rem`;
   })
   
-  console.log('test')
+}
+// Call the function initially to set the width of the each carousel item
+setItemWidth();
 
 
-  
+// Function to log the screen width on resize
+function logScreenWidth() {
+  const screenWidth = window.innerWidth;
+  console.log("Screen width:", screenWidth);
 }
 
-setItemWidth();
+// Add an event listener for the 'resize' event
+window.addEventListener('resize', logScreenWidth);
+
+// Call the function initially to log the current screen width
+logScreenWidth();
+
+
+
