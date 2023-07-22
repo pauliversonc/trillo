@@ -133,14 +133,9 @@
     align-self: stretch;
     margin-top: 1rem;
     grid-column: 1/-1;
-    color: #fff;
-    font-weight: 600;
+    @include buttonPri;
     padding: 1rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
     border-radius: 100rem;
-    background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
   }
 
   &__icon-box {

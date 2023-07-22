@@ -1,4 +1,5 @@
 @import "abstract/variables";
+@import "abstract/mixins";
 
 @import "base/base";
 @import "base/animation";
@@ -27,3 +28,4 @@
 @import "layout/detail";
 @import "layout/cta";
 @import "layout/flight-view";
+@import "layout/rent-view";
