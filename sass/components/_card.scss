@@ -1,0 +1,42 @@
+.card {
+  display: flex;
+  gap: 1.4rem;
+  background-color: #fff;
+  padding: 2rem;
+
+  box-shadow: var(--shadow-l);
+
+
+  &__icon-box {
+    border-radius: 50%;
+    background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+    padding: 1rem;
+    
+  }
+
+  &__icon {
+    height: 1.4rem;
+    width: 1.4rem;
+    fill: #fff;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: .4rem;
+    color: var(--grey-dark-1);
+    
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.4;
+    color: var(--grey-dark-2);
+  }
+}

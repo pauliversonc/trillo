@@ -783,6 +783,34 @@ html {
       padding: .8rem;
       fill: currentColor; }
 
+.card {
+  display: flex;
+  gap: 1.4rem;
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: var(--shadow-l); }
+  .card__icon-box {
+    border-radius: 50%;
+    background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+    padding: 1rem; }
+  .card__icon {
+    height: 1.4rem;
+    width: 1.4rem;
+    fill: #fff; }
+  .card__body {
+    display: flex;
+    flex-direction: column; }
+  .card__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: .4rem;
+    color: var(--grey-dark-1); }
+  .card__text {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.4;
+    color: var(--grey-dark-2); }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -881,7 +909,13 @@ html {
   gap: 4.5rem; }
 
 .rent {
-  width: 100%; }
+  width: 100%;
+  background-color: var(--grey-light-2); }
+  .rent__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
   .rent__wrapper {
     display: flex;
     flex-direction: column;
@@ -952,21 +986,11 @@ html {
     outline: none;
     cursor: pointer;
     background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark)); }
-  .rent__deals {
-    display: flex;
-    border-bottom: 2px solid var(--primary);
-    padding: 2rem 4.5rem;
-    justify-content: space-between; }
-  .rent__deal {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: var(--primary); }
-  .rent__deal-icon {
-    width: 2rem;
-    height: 2rem;
-    fill: currentColor; }
-  .rent__text {
-    font-size: 1.4rem;
-    color: currentColor;
-    font-weight: 400; }
+  .rent__abouts {
+    margin: 4.5rem; }
+  .rent__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; }
+  .rent__services-title {
+    padding: 2rem 4.5rem; }

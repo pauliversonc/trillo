@@ -1,6 +1,13 @@
 .rent {
   width: 100%;
+  background-color: var(--grey-light-2);
 
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
   &__wrapper {
 
     display: flex;
@@ -93,36 +100,22 @@
     @include buttonPri;
   }
 
-  &__deals {
-    display: flex;
-    border-bottom: 2px solid var(--primary);
+  &__abouts {
+    
+    margin: 4.5rem;
+    
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+
+  &__services-title {
     padding: 2rem 4.5rem;
-    justify-content: space-between;
   }
-
-  &__deal {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    // background-color: red;
-    color: var(--primary);
-
-  }
-
-  &__deal-icon {
-    width: 2rem;
-    height: 2rem;
-    fill: currentColor;
-
-  }
-
-  &__text{
-    font-size: 1.4rem;
-    color: currentColor;
-    font-weight: 400;
-  }
-
-
 
 
 }
