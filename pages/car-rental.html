@@ -97,15 +97,17 @@
             </nav>
 
             <main class="rent">
+                <div class="rent__wrapper">
+                    
                     <h4 class="rent__heading u-mb-m">
                         <span class="rent__title">Rent a car</span>
                         <span class="rent__body">Explore the World on Wheels, Rent Today!</span>
                     </h4>
                     
-                    <form action="#" class="rent__form">
+                    <form action="#" class="rent__form ">
                         <div class="rent__form-group">
                             <label class="rent__label" for="rentFrom">Input location</label>
-                            <div class="rent__wrapper">
+                            <div class="rent__form-wrap">
                                 <input type="text" placeholder="Pick-up location" name="rentFrom" id="rentFrom" class="rent__input">
                                 <input type="text" placeholder="Return to" name="rentto" id="rentto" class="rent__input">
                             </div>
@@ -114,7 +116,7 @@
 
                         <div class="rent__form-group">
                             <label class="rent__label" for="rentFrom">Select date</label>
-                            <div class="rent__wrapper">
+                            <div class="rent__form-wrap">
                                 <input type="date" name="rentDateFrom" id="rentDateFrom" class="rent__input">
                                 <input type="date" name="rentDateTo" id="rentDateTo" class="rent__input">
                             </div>
@@ -132,6 +134,39 @@
 
                         <button class="rent__btn-submit btn-apply">Search</button>
                     </form>
+
+                </div>
+
+                <div class="rent__deals">
+
+                    <div class="rent__deal">
+                        <svg class="rent__deal-icon">
+                            <use xlink:href="../img/sprite.svg#icon-ccw"></use>
+                        </svg>
+                        <span class="rent__text">Lorem, ipsum dolor.</span>
+                    </div>
+
+                    <div class="rent__deal">
+                        <svg class="rent__deal-icon">
+                            <use xlink:href="../img/sprite.svg#icon-ccw"></use>
+                        </svg>
+                        <span class="rent__text">Lorem, ipsum dolor.</span>
+                    </div>
+
+                    <div class="rent__deal">
+                        <svg class="rent__deal-icon">
+                            <use xlink:href="../img/sprite.svg#icon-ccw"></use>
+                        </svg>
+                        <span class="rent__text">Lorem, ipsum dolor.</span>
+                    </div>
+
+                    <div class="rent__deal">
+                        <svg class="rent__deal-icon">
+                            <use xlink:href="../img/sprite.svg#icon-ccw"></use>
+                        </svg>
+                        <span class="rent__text">Lorem, ipsum dolor.</span>
+                    </div>
+                </div>
             </main>
 
         </div>

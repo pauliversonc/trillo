@@ -881,16 +881,16 @@ html {
   gap: 4.5rem; }
 
 .rent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("../img/rental-1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   width: 100%; }
+  .rent__wrapper {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("../img/rental-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
   .rent__heading {
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -902,17 +902,18 @@ html {
     color: #fff; }
   .rent__body {
     font-size: 1.8rem;
-    color: #fff; }
+    color: #fff;
+    font-weight: 400; }
   .rent__form {
+    align-self: stretch;
     display: flex;
     align-items: end;
-    justify-content: center;
+    justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     padding: 3rem;
-    color: #000; }
-    .rent__form > *:not(:last-child) {
-      margin-right: 2rem; }
+    color: #000;
+    margin: 0 4.5rem 4.5rem 4.5rem; }
   .rent__form-group {
     display: flex;
     flex-direction: column;
@@ -923,10 +924,10 @@ html {
     font-weight: 600;
     color: #fff;
     display: block; }
-  .rent__wrapper {
+  .rent__form-wrap {
     display: flex;
     align-items: center; }
-    .rent__wrapper > *:not(:last-child) {
+    .rent__form-wrap > *:not(:last-child) {
       margin-right: .4rem; }
   .rent__input {
     width: 100%;
@@ -951,3 +952,21 @@ html {
     outline: none;
     cursor: pointer;
     background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark)); }
+  .rent__deals {
+    display: flex;
+    border-bottom: 2px solid var(--primary);
+    padding: 2rem 4.5rem;
+    justify-content: space-between; }
+  .rent__deal {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--primary); }
+  .rent__deal-icon {
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor; }
+  .rent__text {
+    font-size: 1.4rem;
+    color: currentColor;
+    font-weight: 400; }

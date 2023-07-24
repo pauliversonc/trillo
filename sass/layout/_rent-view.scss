@@ -1,96 +1,128 @@
-
-
 .rent {
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  background-image: linear-gradient(to bottom, rgba(transparent, 0), rgba(#000, 0.8)), url('../img/rental-1.jpg');
-  background-size: cover ;
-  background-repeat: no-repeat;
-  background-position: center;
-
   width: 100%;
- 
-&__heading{
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  text-align: center;
-  
 
-}
+  &__wrapper {
 
-&__title{
-  padding: 0;
-  font-size: 3.4rem;
-  font-weight: 600;
-  color: #fff;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
 
-}
+    background-image: linear-gradient(to bottom, rgba(transparent, 0), rgba(#000, 0.8)), url('../img/rental-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
-&__body{
-  font-size: 1.8rem;
-  color: #fff;
-  
-}
-
-
-
-&__form{
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  background-color: rgba(#000, 0.5);
-  border-radius: 5px;
-  padding: 3rem;
-  color: #000;
-
-  & > *:not(:last-child) {
-    margin-right: 2rem;
   }
 
-}
+  &__heading {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
 
-&__form-group {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-}
-
-&__label {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  display: block;
-}
-
-&__wrapper {
-  display: flex;
-  align-items: center;
-  & > *:not(:last-child) {
-    margin-right: .4rem;
   }
+
+  &__title {
+    padding: 0;
+    font-size: 3.4rem;
+    font-weight: 600;
+    color: #fff;
+
+  }
+
+  &__body {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 400;
+  }
+
+
+
+  &__form {
+    align-self: stretch;
+
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    background-color: rgba(#000, 0.5);
+    border-radius: 5px;
+    padding: 3rem;
+    color: #000;
+
+    margin: 0 4.5rem 4.5rem 4.5rem;
+
+    // & > *:not(:last-child) {
+    //   margin-right: 2rem;
+    // }
+
+  }
+
+  &__form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+
+  &__label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    display: block;
+  }
+
+  &__form-wrap {
+    display: flex;
+    align-items: center;
+
+    &>*:not(:last-child) {
+      margin-right: .4rem;
+    }
+  }
+
+
+  &__input {
+    @include input;
+  }
+
+  &__btn-submit {
+    border-radius: 8px;
+    padding: 1.24rem;
+    @include buttonPri;
+  }
+
+  &__deals {
+    display: flex;
+    border-bottom: 2px solid var(--primary);
+    padding: 2rem 4.5rem;
+    justify-content: space-between;
+  }
+
+  &__deal {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    // background-color: red;
+    color: var(--primary);
+
+  }
+
+  &__deal-icon {
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
+
+  }
+
+  &__text{
+    font-size: 1.4rem;
+    color: currentColor;
+    font-weight: 400;
+  }
+
+
+
+
 }
-
-
-&__input{
-  @include input;
-}
-
-&__btn-submit {
-  border-radius: 8px;
-  padding: 1.24rem;
-  @include buttonPri;
-}
-
-
-}
-
-
-
-
-
