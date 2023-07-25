@@ -64,6 +64,9 @@ html {
 .u-mb-xl {
   margin-bottom: 3rem  !important; }
 
+.p-xl {
+  padding: 4.5rem  !important; }
+
 .search {
   flex: 0 0 40%;
   display: flex;
@@ -301,6 +304,19 @@ html {
     transition: all .2s ease; }
   .btn-outline:hover::after, .btn-outline.active::after {
     width: 100%; }
+
+.btn-rounded {
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  padding: 1.2rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-l);
+  cursor: pointer;
+  color: var(--primary-dark);
+  background-color: #fff; }
 
 .description {
   background-color: #fff;
@@ -801,7 +817,7 @@ html {
     display: flex;
     flex-direction: column; }
   .card__title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: .4rem;
     color: var(--grey-dark-1); }
@@ -810,6 +826,74 @@ html {
     font-weight: 300;
     line-height: 1.4;
     color: var(--grey-dark-2); }
+
+.car-card {
+  display: flex;
+  gap: 1.4rem;
+  background-color: #fff;
+  box-shadow: var(--shadow-l);
+  flex-direction: column;
+  position: relative; }
+  .car-card__header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6rem;
+    padding: 0 3rem;
+    margin-top: 3rem; }
+  .car-card__title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--grey-dark-1); }
+  .car-card__tag {
+    border-radius: 100px;
+    font-size: 1rem;
+    background-color: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .4rem .6rem;
+    border: none;
+    outline: none;
+    box-shadow: var(--shadow-xl);
+    text-transform: uppercase;
+    font-size: 600;
+    align-self: start; }
+  .car-card__body {
+    padding: 8rem 3rem 3rem 3rem;
+    background-image: linear-gradient(to bottom, var(--primary-light), var(--primary-dark));
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    overflow: visible; }
+  .car-card__img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, 55%);
+    z-index: 9999; }
+  .car-card__features {
+    display: flex;
+    margin-bottom: 2rem;
+    justify-content: space-between; }
+  .car-card__feature {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary);
+    border-radius: 5px;
+    box-shadow: var(--shadow-xl); }
+  .car-card__icon-box {
+    padding: 1.4rem 1.4rem 0 1.4rem; }
+  .car-card__icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    fill: currentColor; }
+  .car-card__value {
+    padding: .4rem 1.4rem 1.4rem 1.4rem; }
 
 .container {
   max-width: 120rem;
@@ -912,10 +996,19 @@ html {
   width: 100%;
   background-color: var(--grey-light-2); }
   .rent__heading {
-    font-size: 2.25rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px; }
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column; }
+    .rent__heading--title {
+      font-weight: 600; }
+    .rent__heading--desc {
+      font-size: 1.4rem;
+      font-weight: 300; }
+    .rent__heading.white {
+      color: #fff; }
+    .rent__heading.center {
+      text-align: center; }
   .rent__wrapper {
     display: flex;
     flex-direction: column;
@@ -923,7 +1016,7 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; }
-  .rent__heading {
+  .rent__header {
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
@@ -992,5 +1085,7 @@ html {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem; }
-  .rent__services-title {
-    padding: 2rem 4.5rem; }
+  .rent__services {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("../img/rental-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
