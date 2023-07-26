@@ -810,10 +810,13 @@ html {
   .card__icon-box {
     border-radius: 50%;
     background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
-    padding: 1rem; }
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .card__icon {
-    height: 1.4rem;
-    width: 1.4rem;
+    height: 1.8rem;
+    width: 1.8rem;
     fill: #fff; }
   .card__body {
     display: flex;
@@ -835,7 +838,8 @@ html {
   background-color: #fff;
   box-shadow: var(--shadow-l);
   flex-direction: column;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .car-card__header {
     display: flex;
     flex-direction: column;
@@ -874,8 +878,32 @@ html {
     top: 0;
     left: 50%;
     width: 80%;
-    transform: translate(-50%, 55%);
-    z-index: 9999; }
+    z-index: 9999;
+    transition: all .4s ease-out; }
+    .car-card__img--1 {
+      transform: translate(-30%, 55%); }
+    .car-card__img--2 {
+      transform: translate(-30%, 55%); }
+    .car-card__img--3 {
+      transform: translate(-30%, 43%); }
+    .car-card__img--4 {
+      transform: translate(-30%, 115%); }
+    .car-card__img--5 {
+      transform: translate(-30%, 70%); }
+    .car-card__img--6 {
+      transform: translate(-30%, 72%); }
+  .car-card:hover .car-card__img--1 {
+    transform: translate(-50%, 55%); }
+  .car-card:hover .car-card__img--2 {
+    transform: translate(-50%, 55%); }
+  .car-card:hover .car-card__img--3 {
+    transform: translate(-50%, 43%); }
+  .car-card:hover .car-card__img--4 {
+    transform: translate(-50%, 115%); }
+  .car-card:hover .car-card__img--5 {
+    transform: translate(-50%, 70%); }
+  .car-card:hover .car-card__img--6 {
+    transform: translate(-50%, 72%); }
   .car-card__features {
     display: flex;
     margin-bottom: 2rem;

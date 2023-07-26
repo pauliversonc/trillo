@@ -11,12 +11,16 @@
     border-radius: 50%;
     background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
     padding: 1rem;
-    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
 
   &__icon {
-    height: 1.4rem;
-    width: 1.4rem;
+    height: 1.8rem;
+    width: 1.8rem;
     fill: #fff;
   }
 
@@ -30,7 +34,7 @@
     font-weight: 600;
     margin-bottom: .4rem;
     color: var(--grey-dark-1);
-    
+
   }
 
   &__text {
@@ -45,11 +49,12 @@
   display: flex;
   gap: 1.4rem;
   background-color: #fff;
-  
+
   // padding: 2rem;
   box-shadow: var(--shadow-l);
   flex-direction: column;
   position: relative;
+  overflow: hidden;
 
 
 
@@ -83,7 +88,6 @@
     box-shadow: var(--shadow-xl);
     text-transform: uppercase;
     font-size: 600;
-    // transform: translate(-50%, 50%);
     align-self: start;
   }
 
@@ -99,7 +103,6 @@
     flex-direction: column;
     color: #fff;
     overflow: visible;
-    // z-index: 9999;
   }
 
   &__img {
@@ -107,8 +110,60 @@
     top: 0;
     left: 50%;
     width: 80%;
-    transform: translate(-50%, 55%);
     z-index: 9999;
+    transition: all .4s ease-out;
+
+    &--1 {
+      transform: translate(-30%, 55%);
+    }
+
+    &--2 {
+      transform: translate(-30%, 55%);
+    }
+
+    &--3 {
+      transform: translate(-30%, 43%);
+    }
+
+    &--4 {
+      transform: translate(-30%, 115%);
+    }
+
+    &--5 {
+      transform: translate(-30%, 70%);
+    }
+
+    &--6 {
+      transform: translate(-30%, 72%);
+    }
+  }
+
+  &:hover {
+
+    .car-card__img--1 {
+      transform: translate(-50%, 55%);
+    }
+
+    .car-card__img--2 {
+      transform: translate(-50%, 55%);
+    }
+
+    .car-card__img--3 {
+      transform: translate(-50%, 43%);
+    }
+
+    .car-card__img--4 {
+      transform: translate(-50%, 115%);
+    }
+
+    .car-card__img--5 {
+      transform: translate(-50%, 70%);
+    }
+
+    .car-card__img--6 {
+      transform: translate(-50%, 72%);
+    }
+
   }
 
   &__features {
@@ -116,7 +171,7 @@
     margin-bottom: 2rem;
     justify-content: space-between;
   }
-  
+
   &__feature {
     list-style: none;
 
