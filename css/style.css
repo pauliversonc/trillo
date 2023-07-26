@@ -11,6 +11,7 @@
   --grey-dark-3: #999;
   --shadow-xl: 0 2rem 6rem rgba(0, 0, 0, .3);
   --shadow-l: 0 2rem 5rem rgba(0,0,0, .06);
+  --shadow-2l: 0 2rem 3rem rgba(0,0,0, .04);
   --line: 1px solid var(--grey-light-2); }
 
 * {
@@ -238,46 +239,6 @@ html {
     outline: none;
     animation: pulsate 1s infinite; }
 
-.btn {
-  font-size: 1.5rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  border-radius: 100px;
-  border: none;
-  background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer; }
-  .btn > * {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    transition: all .2s; }
-  .btn__visible {
-    padding: 1.4rem 7.5rem; }
-    .btn__visible.p-reset {
-      padding: 1.4rem; }
-  .btn__invisible {
-    position: absolute;
-    left: 0;
-    top: -100%;
-    padding: 1.4rem 0; }
-  .btn:hover {
-    background-image: linear-gradient(to left, var(--primary-light), var(--primary-dark)); }
-  .btn:hover .btn__visible {
-    transform: translateY(100%); }
-  .btn:hover .btn__invisible {
-    top: 0; }
-  .btn:focus {
-    outline: none;
-    animation: pulsate 1s infinite; }
-  .btn.btn-sm {
-    margin-top: 1rem;
-    grid-column: 1 / -1; }
-  .btn.btn-xs {
-    width: 100%; }
-
 .btn-outline {
   border: none;
   outline: none;
@@ -304,8 +265,10 @@ html {
     transition: all .2s ease; }
   .btn-outline:hover::after, .btn-outline.active::after {
     width: 100%; }
+  .btn-outline.transparent {
+    background-color: transparent; }
 
-.btn-rounded {
+.button {
   border: none;
   outline: none;
   border-radius: 100px;
@@ -316,7 +279,43 @@ html {
   box-shadow: var(--shadow-l);
   cursor: pointer;
   color: var(--primary-dark);
-  background-color: #fff; }
+  background-color: #fff;
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  color: var(--primary);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+  border-color: #dedede;
+  width: 100%;
+  transition: all .2s; }
+  .button__visible {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: currentColor;
+    transition: all .2s; }
+  .button__invisible {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -300%);
+    position: absolute;
+    color: currentColor;
+    transition: all .2s; }
+  .button:hover .button__visible {
+    transform: translate(-50%, 200%); }
+  .button:hover .button__invisible {
+    transform: translate(-50%, -50%); }
+  .button:hover {
+    box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5); }
+  .button__sm {
+    max-width: 30rem; }
+  .button__primary {
+    background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+    color: #fff;
+    transition: all .2s; }
+  .button:hover.button__primary {
+    background-image: linear-gradient(to left, var(--primary-light), var(--primary-dark)); }
 
 .description {
   background-color: #fff;
@@ -629,6 +628,9 @@ html {
     background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
     padding: 1rem;
     border-radius: 100rem; }
+  .book__btn-wrapper {
+    margin-top: 1rem;
+    grid-column: 1/-1; }
   .book__icon-box {
     position: absolute;
     bottom: 0;
@@ -885,7 +887,10 @@ html {
     align-items: center;
     background-color: var(--primary);
     border-radius: 5px;
+    transition: all .2s;
     box-shadow: var(--shadow-xl); }
+    .car-card__feature:hover {
+      transform: translateY(-5%); }
   .car-card__icon-box {
     padding: 1.4rem 1.4rem 0 1.4rem; }
   .car-card__icon {
@@ -1086,6 +1091,12 @@ html {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem; }
   .rent__services {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("../img/rental-1.jpg");
     background-size: cover;
     background-repeat: no-repeat; }
+  .rent__services-header {
+    display: flex;
+    justify-content: space-between; }
+  .rent__controls {
+    display: flex;
+    gap: 1rem;
+    align-self: end; }

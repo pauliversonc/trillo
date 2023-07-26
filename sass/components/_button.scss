@@ -29,78 +29,6 @@
 }
 
 
-.btn {
-  font-size: 1.5rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  border-radius: 100px;
-  border: none;
-  background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-
-  & > * {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    transition: all .2s;
-  }
-
-  // Initial State
-  &__visible {
-    padding: 1.4rem 7.5rem;
-
- 
-    &.p-reset {
-      padding: 1.4rem;
-
-    }
-  }
-
-
-
-  &__invisible {
-    position: absolute;
-    left: 0;
-    top: -100%;
-    padding: 1.4rem 0;
-  }
-
-  &:hover {
-    background-image: linear-gradient(to left, var(--primary-light), var(--primary-dark));
-  }
-
-  // Hover State
-  &:hover &__visible{
-    transform: translateY(100%);
-  }
-
-  &:hover &__invisible{
-    top: 0;
-  }
-
-  &:focus {
-    outline: none;
-    animation: pulsate 1s infinite;
-  }
-
-  &.btn-sm {
-    margin-top: 1rem;
-    grid-column: 1 / -1;
-    // padding: 1rem;
-  }
-
-  &.btn-xs {
-    width: 100%;
-  }
-
- 
-}
-
-
-
 
 .btn-outline {
   border: none;
@@ -138,10 +66,18 @@
     width: 100%;
   }
 
+  &.transparent {
+    background-color: transparent;
+  }
+
 }
 
 
-.btn-rounded {
+
+
+
+
+.button {
   border: none;
   outline: none;
   border-radius: 100px;
@@ -153,4 +89,61 @@
   cursor: pointer;
   color: var(--primary-dark);
   background-color: #fff;
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  color: var(--primary);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+  border-color: #dedede;
+  width: 100%;
+  transition: all .2s;
+
+  
+
+
+  &__visible {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); // initial state -50%
+    // transform: translate(-50%, 200%); // hover state 200%
+    position: absolute;
+    color: currentColor;
+    transition: all .2s;
+  }
+
+  &__invisible {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -300%); // initial state -300
+    position: absolute;
+    color: currentColor;
+    transition: all .2s;
+  }
+
+  &:hover &__visible {
+    transform: translate(-50%, 200%); // hover state 200%
+  }
+
+  &:hover &__invisible {
+    transform: translate(-50%, -50%); // hover state -50%
+  }
+
+  &:hover {
+    box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+  }
+
+  &__sm {
+    max-width: 30rem;
+  }
+
+  &__primary {
+    background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+    color: #fff;
+    transition: all .2s;
+  }
+
+  &:hover.button__primary {
+    background-image: linear-gradient(to left, var(--primary-light), var(--primary-dark));
+
+  }
 }

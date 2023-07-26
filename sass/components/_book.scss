@@ -138,6 +138,11 @@
     border-radius: 100rem;
   }
 
+  &__btn-wrapper {
+    margin-top: 1rem;
+    grid-column: 1/-1;
+  }
+
   &__icon-box {
     position: absolute;
     bottom: 0;

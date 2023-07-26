@@ -138,10 +138,24 @@
 
 
   &__services {
-    background-image: linear-gradient(to bottom, rgba(transparent, 0.4), rgba(#000, 0.8)), url('../img/rental-1.jpg');
+    // background-image: linear-gradient(to bottom, rgba(transparent, 0.4), rgba(#000, 0.8)), url('../img/rental-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  &__services-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__controls {
+    display: flex;
+    gap: 1rem;
+
+    align-self: end;
+  }
+
+
 
 
 }
