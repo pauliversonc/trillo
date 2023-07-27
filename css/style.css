@@ -1128,3 +1128,55 @@ html {
     display: flex;
     gap: 1rem;
     align-self: end; }
+
+.tours {
+  width: 100%;
+  background-color: var(--grey-light-2); }
+  .tours__header {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url("../img/rental-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .tours__header-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4.5rem; }
+  .tours__title {
+    font-size: 3.4rem;
+    color: #fff; }
+  .tours__text {
+    font-size: 1.8rem;
+    color: #fff; }
+  .tours__search-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 3rem;
+    color: #000;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    gap: 1rem; }
+  .tours__label {
+    grid-column: 1 / -1;
+    color: #fff;
+    margin-bottom: -1rem; }
+  .tours__search-input {
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: inherit;
+    color: inherit;
+    border: 1px solid var(--grey-light-3);
+    background-color: var(--grey-light-1);
+    border-radius: 8px;
+    padding: 1rem;
+    outline: none; }
+  .tours__search-btn {
+    border-radius: 8px;
+    padding: 1.24rem;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark)); }
