@@ -1,12 +1,10 @@
 .carousel { // container
   height: 20rem; // 200px
-  // border: 1px solid red;
   position: relative;
   overflow: hidden;
 
 
   &__width {
-    // border: 1px solid green;
     position: absolute;
     top: 0;
     left: 0;
@@ -76,10 +74,6 @@
 
   }
 
-  // &__img:hover + &__body, &__body:hover {
-  //   transform: translateY(-102%);
-
-  // }
 
   &__city {
     font-size: 1.6rem;

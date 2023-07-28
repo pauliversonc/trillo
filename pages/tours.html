@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" type="../image/png" href="../img/favicon.png">
-
     <title>trillo &mdash; Your all-in-one booking app</title>
 </head>
 
@@ -99,22 +98,110 @@
             <main class="tours">
 
                 <div class="tours__header">
-                    <div class="tours__header-wrapper">
-                        <span class="tours__title">Your world of joy</span>
-                        <span class="tours__text u-mb-m">From local escapes to far-flung adventures, find what makes you happy anytime, anywhere</span>
-                        <div class="tours__search-container">
-                            <label class="tours__label" for="toursName">Input location</label>
-                            <input class="tours__search-input" type="text" name="toursName" id="toursName">
-                            <button class="tours__search-btn">Search</button>
+                    <form class="tours__form">
+
+                        <div class="tours__form-group">
+                            <label class="tours__label" for="toursLocation">Location</label>
+                            <input type="text" name="toursLocation" class="tours__input">
+                        </div>
+
+                        <div class="tours__form-group">
+                            <label class="tours__label" for="toursDate">To</label>
+                            <input type="date" name="toursDate" class="tours__input" id="toursDate">
+                        </div>
+
+                        <div class="tours__form-group">
+                            <label class="tours__label" for="toursGuests">Guests</label>
+                            <input type="text" name="toursGuests" class="tours__input" id="toursGuests">
+                        </div>
+
+                        <div class="tours__btn-wrapper">
+                            <button class="button button__primary">
+                                <div class="button__visible">Find flight</div>
+                                <div class="button__invisible">Promo code allowed</div>
+                            </button>
+                        </div>
+
+                    </form>
+
+                    <div class="tours__group">
+                        <div class="tours__type tours__type--1">
+                            <span class="tours__type--title">Beach Destinations</span>
+                            <span class="tours__type--offer">12,347 offers</span>
+                        </div>
+                        <div class="tours__type tours__type--2">
+                            <span class="tours__type--title">Mountain Adventures</span>
+                            <span class="tours__type--offer">12,347 offers</span>
+                        </div>
+                        <div class="tours__type tours__type--3">
+                            <span class="tours__type--title">Enchanting Deserts</span>
+                            <span class="tours__type--offer">12,347 offers</span>
+                        </div>
+                        <div class="tours__type tours__type--4">
+                            <span class="tours__type--title">Amusment Parks </span>
+                            <span class="tours__type--offer">12,347 offers</span>
                         </div>
                     </div>
+           
+
+
+                </div>
+             
+
+                <div class="tours__body">
+               
+                    <h6 class="tours__sub-heading">
+                        <span class="tours__sub-heading-title">Offers to inspire you</span>
+                        <span class="tours__sub-heading-text">Explore, Discover, Adventure: Your Dream Journey Awaits.</span>
+                    </h6>
+
+                    <div class="tours__body-cards">
+
+                        
+                        <div class="promo-card">
+                            <div class="promo-card__header">
+                                <img  class="promo-card__img" src="../img/park.jpg" alt="Promo card 1">
+                            </div>
+
+                            <div class="promo-card__body">
+                                <div class="promo-card__title">Mayang Falls</div>
+                                <div class="promo-card__price">$399</div>
+                                <div class="promo-card__country">
+                                    <div class="promo-card__icon-box">
+                                        <svg class="promo-card__icon">
+                                            <use xlink:href="../img/sprite.svg#icon-users"></use>
+                                        </svg>
+                                    </div>
+                                    <span>Philippines</span>
+                                </div>
+                                <div class="promo-card__person">2 Adults</div>
+                            </div>
+
+                            <div class="promo-card__footer">
+                                <div class="promo-card__icon-box">
+                                    <svg class="promo-card__icon">
+                                        <use xlink:href="../img/sprite.svg#icon-users"></use>
+                                    </svg>
+                                </div>
+                                <span>May 18-20 - 2 nights</span>
+                            </div>
+                        </div>
+
+                        
+                        
+                    </div>
+
+
+
+
+
                 </div>
 
 
-                <h4 class="rent__header u-mb-m">
-                    <span class="rent__title">Rent a car</span>
-                    <span class="rent__body">Explore the World on Wheels, Rent Today!</span>
-                </h4>
+
+                
+
+
 
             </main>
 

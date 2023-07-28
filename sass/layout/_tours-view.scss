@@ -3,50 +3,35 @@
   background-color: var(--grey-light-2);
 
   &__header {
-    background-image: linear-gradient(to bottom, rgba(#000, 0.1), rgba(#000, .9)), url('../img/rental-1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    
-  }
-
-  &__header-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding: 4.5rem;
-  }
-
-  &__title {
-    font-size: 3.4rem;
-    color: #fff;
-  }
-
-  &__text {
-    font-size: 1.8rem;
-    color: #fff;
-  }
-
-  &__search-container {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    padding: 3rem;
-    color: #000;
-
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 1fr 2fr;
+    border: 1px solid red;
+    padding: 4.5rem;
     gap: 1rem;
   }
 
-  &__label {
-    grid-column: 1 / -1;
-    color: #fff;
-    margin-bottom: -1rem;
+  &__form {
+    background-color: #fff;
+    box-shadow: var(--shadow-l);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
   }
 
-  &__search-input {
+  &__form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+  }
+
+  &__input {
     width: 100%;
     font-family: inherit;
     font-size: 1.2rem;
@@ -57,21 +42,101 @@
     border-radius: 8px;
     padding: 1rem;
 
-    outline: none;
-    
-
-
+    &:focus {
+      outline: none;
+    }
   }
 
-  &__search-btn {
-    border-radius: 8px;
-    padding: 1.24rem;
-    color: #fff;
+  &__btn-wrapper {
+    margin-top: 1rem;
+  }
+
+
+
+
+  &__body {
+    padding: 4.5rem;
+  }
+
+  &__body-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__sub-heading {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__sub-heading-title {
+    font-size: 18px;
     font-weight: 600;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+  }
+
+  &__sub-heading-text {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__group {
+    // box-shadow: var(--shadow-l);
+    // padding: 3rem;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  &__type {
+    background-color: #fff;
+    box-shadow: var(--shadow-l);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 3rem;
+
+    &--title {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    &--offer {
+      font-size: 1rem;
+      color: var(--grey-light-4);
+    }
+
+    &--1{
+      grid-column: 1;
+      grid-row: 1 / 3;
+      background-image: linear-gradient(transparent 0%, transparent 60%, #000 100%), url('../img/beach.jpg');
+    }
+    &--2{
+      background-image: linear-gradient(transparent 0%, transparent 60%, #000 100%), url('../img/mountain.jpg');
+      grid-column: 2/-1;
+
+      
+    }
+    &--3{
+      background-image: linear-gradient(transparent 0%, transparent 60%, #000 100%), url('../img/desert.jpg');
+      .tours__type--title {
+        font-size: 1.4rem;
+      }
+    }
+    &--4{
+      background-image: linear-gradient(transparent 0%, transparent 60%, #000 100%), url('../img/park.jpg');
+      .tours__type--title {
+        font-size: 1.4rem;
+      }
+    }
+
+
+
+
   }
 
 }
